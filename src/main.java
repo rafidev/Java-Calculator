@@ -17,27 +17,22 @@ public class main {
 
 
     public void Main() {
+        JSplitPane splitPane = new JSplitPane();
 
-        JSplitPane splitPane = new JSplitPane(); // split the panel in top (textPanel) and bottom (buttonPanel)
-
-        mainFrame = new JFrame();
-        mainFrame.setTitle("calculator");
+        mainFrame = new JFrame("Calculator");
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        mainFrame.setVisible(true);
-        mainFrame.setLocationRelativeTo(null);
         mainFrame.setSize(300, 500);
+        mainFrame.setLocationRelativeTo(null);
+
 
         textPanel = new JPanel(new BorderLayout());
-        textPanel.setVisible(true);
         jTextField = new JTextField();
         jTextField.setFont(new Font("font", Font.PLAIN, 30));
-        textPanel.add(jTextField);
         jTextField.setEditable(false);
+        textPanel.add(jTextField, BorderLayout.CENTER);
 
-        buttonPanel = new JPanel();
-        buttonPanel.setVisible(true);
-        buttonPanel.setLayout(new GridLayout(5,4));
 
+        buttonPanel = new JPanel(new GridLayout(5,4));
         addButtonAc();
         addButtonPercent();
         addButtonExponent();
@@ -59,12 +54,17 @@ public class main {
         addButtonEquals();
         addButtonDivision();
 
-        mainFrame.add(splitPane);
+
         splitPane.setOrientation(JSplitPane.VERTICAL_SPLIT);
         splitPane.setDividerLocation(150);
         splitPane.setTopComponent(textPanel);
         splitPane.setBottomComponent(buttonPanel);
 
+
+        mainFrame.add(splitPane);
+
+
+        mainFrame.setVisible(true);
     }
 
     public void addButton1(){

@@ -9,6 +9,7 @@
 # Distribution artifacts
 *.jar
 
+
 # OS-specific files
 .DS_Store
 Thumbs.db
@@ -27,3 +28,7 @@ consoles/
 # Ignore compiled resources and backup files
 *.bak
 *.swp
+
+# Build helper files
+MANIFEST.MF
+sources.txt
