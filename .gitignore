@@ -1,0 +1,30 @@
+# IntelliJ IDEA project files
+.idea/
+*.iml
+
+# Build output
+/out/
+*.class
+
+# Distribution artifacts
+*.jar
+*.zip
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Git configuration artifacts
+.gitattributes
+
+# IDE scratches and consoles
+scratches/
+consoles/
+
+# Ignore compiled resources and backup files
+*.bak
+*.swp
