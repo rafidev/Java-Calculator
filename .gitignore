@@ -8,7 +8,6 @@
 
 # Distribution artifacts
 *.jar
-*.zip
 
 # OS-specific files
 .DS_Store
